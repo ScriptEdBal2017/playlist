@@ -8,11 +8,14 @@ var songs = [
     "O Canada",
     "Be Glorious, our free Motherland"
 ];
+
+
+
 // BELOW Add 4 More arrays to store images_links, atists, song lengths, and links for each song
 // Make sure they match the same order as your array above
 var images_links = [
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png",
     "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png",
     "https://images-na.ssl-images-amazon.com/images/I/41CERZKNYQL._SX425_.jpg",
     "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/1200px-Flag_of_Canada_%28Pantone%29.svg.png"
     ];
@@ -51,15 +54,15 @@ function displaySongInfo(){
     });
     // BELOW Use forEach Loop to display the data from each of your array's in the correct div
     images_links.forEach(function(images_links) {
-        $("#images").append("<p>" + images_links + "</p>"); 
+        $("#images").append("<img src=" + images_links + ">"); 
     });
     
      artists.forEach(function(artists) {
         $("#artists").append("<p>" + artists + "</p>"); 
     });
     
-     links.forEach(function(links) {
-        $("#links").append("<p>" + links + "</p>"); 
+     links.forEach(function(link) {
+        $("#links").append("<a href="+ link +">Click here to listen</a>"); 
     });
     
      songLengths.forEach(function(songLengths) {

@@ -1,4 +1,4 @@
-h1 {
+-h1 {
     text-align: center;
 }
 
@@ -13,11 +13,10 @@ h1 {
     width: 18%;
     padding: 25px 0px;
 }
-
 #images img {
     display: block;
     height: 100px;
-    width: auto;
+    width: 100px;
     margin: 20px;
 }
 
@@ -64,3 +63,4 @@ button {
     font-size: 14px;
     padding: 5px 10px;
 }
+
