@@ -16,8 +16,10 @@ var songs = [
 var images_links = [
     "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png",
     "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png",
-    "https://images-na.ssl-images-amazon.com/images/I/41CERZKNYQL._SX425_.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/1200px-Flag_of_Canada_%28Pantone%29.svg.png"
+    "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/1200px-Flag_of_Canada_%28Pantone%29.svg.png",
+    "https://images-na.ssl-images-amazon.com/images/I/41CERZKNYQL._SX425_.jpg"
+    
     ];
 
 var artists = [
@@ -43,6 +45,41 @@ var links = [
     "https://www.youtube.com/watch?v=kRPGPAnPNa8",
     "https://www.youtube.com/watch?v=U06jlgpMtQs"
     ];
+
+$("#add").click(function(){
+    var newFlag= $("#image").val();
+    images_links.push(newFlag);
+    for (var i=0; i < images_links.length; i++){
+        $('#pic').append(images_links[i]);
+    }
+
+    var newSong= $("#song").val();
+    songs.push(newSong);
+    for (var i=0; i < songs.length; i++){
+        $('#music').append(songs[i]);
+    }
+    
+    var newArtist= $("#artist").val();
+    artists.push(newArtist);
+    for (var i=0; i < artists.length; i++){
+        $('#composer').append(artists[i]);
+    }
+    
+    var newLength= $("#length").val();
+    songLengths.push(newLength);
+    for (var i=0; i < songLengths.length; i++){
+        $('#duration').append(songLengths[i]);
+    }
+    
+    var newLink= $("#link").val();
+    links.push(newLink);
+    for (var i=0; i < links.length; i++){
+        $('#url').append(links[i]);
+    }
+
+});
+
+
 
 
 
@@ -95,3 +132,5 @@ $("#add").click(function() {
 });
 
 displaySongInfo();
+
+
